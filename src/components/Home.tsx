@@ -1,10 +1,11 @@
 import React from 'react'
 import { Heading, Box, Text,Button, Image, Flex, Spacer } from '@chakra-ui/react'
-import BtnImg from '../assent/addtoslack.png'
-import HomeImage from '../assent/imghome.png'
+import BtnImg from '../assets/addtoslack.png'
+import HomeImage from '../assets/imghome.png'
 function Home() {
   return (
-    <Flex  w='100%' h='100vh' bg='rgba(32, 32, 32, 1)'>
+    <Box w='100%' h='100vh' bg='rgba(32, 32, 32, 1)'>
+      <Flex   w='80%' h='80vh' pt='10vh'  >
     <Box >
       <Heading as='h3' color={'white'}>Help your trainees stay on track</Heading>
       <Text fontSize='xl' color={'white'}>
@@ -20,11 +21,13 @@ function Home() {
   <Button  w='37vh'>Learn More</Button>
  
     </Box>
+    <Spacer />
     <Box>
-      <Image  src={HomeImage } w='65vh' h='70vh'/>
+      <Image  src={HomeImage } boxSize='70vh'/>
     </Box>
  
   </Flex>
+    </Box>
   )
 }
 
