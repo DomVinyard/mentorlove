@@ -11,10 +11,13 @@ import {
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import Home from "./components/Home"
+import Header from "./components/Header"
 
 
 export const App = () => (
   <ChakraProvider theme={theme}>
+     <Header/>
    <Home/>
+  
   </ChakraProvider>
 )
