@@ -1,27 +1,18 @@
 import * as React from "react"
 import {
   ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
   theme,
 } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import Home from "./components/Home"
-import Header from "./components/Header"
-import MentorPage from "./components/MentorPage"
-import EarlyAccess from "./components/EarlyAccess"
+
+import Navbar from './components/Navbar'
+import Landing from "./pages/landing/Landing"
+import Footer from "./components/Footer"
 
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-     <Header/>
-   <Home/>
-   <MentorPage/>
-   <EarlyAccess/>
-  
+  <Navbar/>
+  <Landing/>
+  <Footer/>  
   </ChakraProvider>
 )
