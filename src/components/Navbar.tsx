@@ -5,7 +5,7 @@ import logo from '../assets/logo.png'
   function Navnew() {
     return (  
         <Box bg='#202020' px='100px' color='#FFFFFF'>
-          <Flex h={16} justifyContent='space-between' alignItems={'center'} px='1'>
+          <Flex h={'15vh'} w='80vw' justifyContent='space-between' alignItems={'center'} px='1'>
            <Image src={logo}  h={9} px='10px'/>
 
             <HStack

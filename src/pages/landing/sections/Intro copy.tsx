@@ -1,4 +1,4 @@
-import { Heading, Stack, Box, Text, Button, Image, Flex, HStack, Avatar,Spacer } from '@chakra-ui/react'
+import { Heading, Stack, Box, Text, Button, Image, Flex, HStack, Avatar } from '@chakra-ui/react'
 import BtnImg from '../../../assets/addtoslack.png'
 import HomeImage from '../../../assets/imghome.png'
 import M from '../../../assets/m.png'
@@ -7,21 +7,20 @@ import Classroom from '../../../assets/classroom.png'
 
 function Intro() {
   return (
-    <Flex  alignItems={'center'} justifyContent='center' w="full" bg="#202020"   height={'85vh'} >
-     <Flex flexDirection={['column', 'row']}  w='80vw'   >
-        <Stack  height={'390px'}  w='400px' color='white'  spacing={8}>
+    <Box w="full" bg="#202020" px="100px" pt="80px" mb="120px"  height={'100vh'} >
+     <Flex flexDirection={['column', 'row']} justifyContent='space-between' >
+        <Stack spacing='24px' height={'390px'}  w='400px' pt='60px' color='white'>
           <Heading fontSize={['24px','34px','44px']}> Help your trainees stay on track</Heading>
           <Text fontSize={['18px','20px','28px']}>The automated mentorship platform for companies and schools.</Text>
           <HStack spacing='20px' direction='row' align='center'  >
-              <Button w='9em'  fontSize='20px' bgImage={BtnImg} bgPosition='center'
+              <Button w='170px'  size='md' bgImage={BtnImg} bgPosition='center'
                 bgRepeat='no-repeat' bgSize='cover'>
               </Button>
-              <Button w='9em' fontSize={['12px','16px', '20px']} bgColor='gray.600'>
+              <Button w='170px' size='md' bgColor='gray.600'>
                 Learn More
               </Button>
             </HStack>
         </Stack>
-        <Spacer />
         <Stack height={'390px'}  w='400px'  position="relative">
         <Image src={HomeImage} boxSize='400px' width='300px' objectFit='cover' objectPosition={['80%', '68%']} />
             <Flex flexDirection='column' pos="absolute" top="100" right="15" width='210px' height='110px' bg='#FFFFFF' borderRadius='xl' >
@@ -52,7 +51,7 @@ function Intro() {
 
      </Flex> 
 
-    </Flex>
+    </Box>
   )
 }
 
