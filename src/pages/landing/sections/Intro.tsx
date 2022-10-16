@@ -2,7 +2,7 @@ import { Heading, Stack, Box, Text, Button, Image, Flex, HStack, Avatar,Spacer }
 import BtnImg from '../../../assets/addtoslack.png'
 import HomeImage from '../../../assets/imghome.png'
 import M from '../../../assets/m.png'
-import Classroom from '../../../assets/classroom.png'
+import Classroom from '../../../assets/class.png'
 
 
 function Intro() {
@@ -38,7 +38,7 @@ function Intro() {
             </Flex>
             <Flex flexDirection='column' pos="absolute" top="225" right="50" width='210px' height='110px' bg='#FFFFFF' borderRadius='xl'>
              <HStack   >
-                <Avatar src={Classroom} p='1' />
+                <Avatar src={Classroom} p='2' />
                 <Text fontWeight='bold'> Google Classroom
                 </Text>
 

@@ -1,4 +1,5 @@
-import { Box, HStack, VStack, Avatar, Text} from '@chakra-ui/react'
+import { Box, HStack, VStack, Avatar, Text, Image} from '@chakra-ui/react'
+import Arrow from '../assets/arrow.png'
 
 
 function UpdateCart() {
@@ -12,10 +13,10 @@ function UpdateCart() {
 
                 <Box w='70%' h='80px' bg='#F5F5F5' p='3'>
                     <Text fontWeight='bold'>Maria</Text>
-                    <Text> Helping other trainees with their coursework</Text>
+                    <Text display='flex' flexDirection='row'><Image src={Arrow} boxSize='1em' mr='0.5em'/> Helping other trainees with their coursework</Text>
                 </Box>
                 <Box w='15%' h='80px' bg='#F5F5F5' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+                    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={'2em'}/>
                     <Text fontSize='10px'>2 hour ago</Text>
                 </Box>
             </HStack>
@@ -30,10 +31,10 @@ function UpdateCart() {
 
                 <Box w='70%' h='80px' bg='#F5F5F5' p='3'>
                     <Text fontWeight='bold'>Luca</Text>
-                    <Text> Showing excellent leadership skills</Text>
+                    <Text display='flex' flexDirection='row'><Image src={Arrow} boxSize='1em' mr='0.5em'/> Showing excellent leadership skills</Text>
                 </Box>
                 <Box w='15%' h='80px' bg='#F5F5F5' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds' />
+                <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={'2em'}/>
                     <Text fontSize='10px'>6 hour ago</Text>
                 </Box>
             </HStack>
@@ -48,10 +49,10 @@ function UpdateCart() {
 
                 <Box w='70%' h='80px' bg='#F5F5F5' p='3'>
                     <Text fontWeight='bold'>Dawn</Text>
-                    <Text> Completed professional development workshop</Text>
+                    <Text display='flex' flexDirection='row'><Image src={Arrow} boxSize='1em' mr='0.5em'/> Completed professional development workshop</Text>
                 </Box>
                 <Box w='15%' h='80px' bg='#F5F5F5' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' />
+                <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' boxSize={'2em'}/>
                     <Text fontSize='10px'>2 hour ago</Text>
                 </Box>
             </HStack>
@@ -66,10 +67,10 @@ function UpdateCart() {
 
                 <Box w='70%' h='80px' bg='#F5F5F5' p='3'>
                     <Text fontWeight='bold'>Mylo</Text>
-                    <Text> Personal study work is up to date</Text>
+                    <Text display='flex' flexDirection='row'><Image src={Arrow} boxSize='1em' mr='0.5em'/> Personal study work is up to date</Text>
                 </Box>
                 <Box w='15%' h='80px' bg='#F5F5F5' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
+                <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' boxSize={'2em'} />
                     <Text fontSize='10px'>14 hour ago</Text>
                 </Box>
             </HStack>
