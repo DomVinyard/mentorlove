@@ -10,11 +10,11 @@ function NeedSupport() {
                 </Box>
 
 
-                <Box w='70%' h='100px' bg='#F5F5F5' p='3'>
+                <Box w='70%' h='100px' bg='lighterGray' p='3'>
                     <Text fontWeight='bold'>Jose</Text>
                     <Text display='flex' flexDirection='row'  alignItems='center'><Image src={Arrow} boxSize='1em' mr='0.5em'/>  Did not submit latest task on time</Text>
                 </Box>
-                <Box w='15%' h='100px' bg='#F5F5F5' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
+                <Box w='15%' h='100px' bg='lighterGray' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
                     <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={'2em'} />
                     <Text fontSize='10px'>2 hour ago</Text>
                 </Box>
@@ -28,11 +28,11 @@ function NeedSupport() {
                 </Box>
 
 
-                <Box w='70%' h='100px' bg='#F5F5F5' p='3'>
+                <Box w='70%' h='100px' bg='lighterGray' p='3'>
                     <Text fontWeight='bold'>Dom</Text>
                     <Text display='flex' flexDirection='row'  alignItems='center'><Image src={Arrow} boxSize='1em' mr='0.5em'/> Needs help with time management</Text>
                 </Box>
-                <Box w='15%' h='100px' bg='#F5F5F5' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
+                <Box w='15%' h='100px' bg='lighterGray' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
                 <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={'2em'} />
                     <Text fontSize='10px'>6 hour ago</Text>
                 </Box>

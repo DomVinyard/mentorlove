@@ -1,18 +1,18 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  theme,
-} from "@chakra-ui/react"
+
+import { ChakraProvider } from "@chakra-ui/react"
 
 import Navbar from './components/Navbar'
 import Landing from "./pages/landing/Landing"
 import Footer from "./components/Footer"
+import customTheme from './theme'
 
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-  <Navbar/>
-  <Landing/>
-  <Footer/>  
+  <ChakraProvider theme={customTheme}>
+   
+        <Navbar />
+        <Landing />
+        <Footer />
+ 
   </ChakraProvider>
 )
