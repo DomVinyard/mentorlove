@@ -24,7 +24,7 @@ function Intro() {
         <Spacer />
         <Stack height={'390px'}  w='400px'  position="relative">
         <Image src={HomeImage} boxSize='400px' width='300px' objectFit='cover' objectPosition={['80%', '68%']} />
-            <Flex flexDirection='column' pos="absolute" top="100" right="15" width='210px' height='110px' bg='#FFFFFF' borderRadius='xl' >
+            <Flex flexDirection='column' pos="absolute" top="100" p='2' right="0" width='220px' height='130px' bg='#FFFFFF' borderRadius='xl' >
              <HStack   >
                 <Avatar src={M} p='2' />
                 <Text fontWeight='bold'>To Coach Sadia
@@ -32,11 +32,11 @@ function Intro() {
               </HStack>
               <Text pl='2' pb='2' fontSize='14px'>How is Trainee Maria doing?</Text>
               <HStack >
-                <Button ml='2' width='90px' bg='gray.200' color='black' fontSize='12px' height='25px'>👍On Track</Button>
+                <Button ml='2' width='90px' bg='gray.200' color='black' fontSize='12px' height='25px'>👍 On Track</Button>
                 <Button width='90px' bg='#CE365C' color='white' fontSize='12px' height='25px'>Needs Support</Button>
               </HStack>
             </Flex>
-            <Flex flexDirection='column' pos="absolute" top="225" right="50" width='210px' height='110px' bg='#FFFFFF' borderRadius='xl'>
+            <Flex flexDirection='column' pos="absolute" top="240"  p='2' right="45" width='220px' height='130px' bg='#FFFFFF' borderRadius='xl'>
              <HStack   >
                 <Avatar src={Classroom} p='2' />
                 <Text fontWeight='bold'> Google Classroom

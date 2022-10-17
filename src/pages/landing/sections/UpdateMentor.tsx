@@ -10,7 +10,7 @@ function UpdateMentor() {
        Get automatic trainee updates from mentors, coaches and teachers 
       </Heading>    
     </Box>
-    <Box  w='80vw' height={'320px'} bg='#B9DECC' mb='60px'>
+    <Box  w='80vw' height={'395px'} bg='#B9DECC' mb='60px'>
     <UpdateCart/>
     </Box>
     </Flex>

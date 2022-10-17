@@ -10,7 +10,7 @@ function NeedSupport() {
        Automatically flag when trainees are falling behind or need support
       </Heading>    
     </Box>
-    <Box  w='80vw' height={'135px'} bg='#FEF0EF' mb='60px'>
+    <Box  w='80vw' height={'165px'} bg='#FEF0EF' mb='60px'>
     <Support/>
     </Box>
     </Flex>
