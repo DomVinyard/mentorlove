@@ -15,15 +15,15 @@ function TraineeData() {
             </Box>
             <Flex bg='#EFFAFE' w='80vw' h='180px' justifyContent='space-around' alignItems='center' >
                 <Link>
-                    <Image src={Classroom} alt='classroom' boxSize={['40px', '60px', '80px', '100px']}  objectFit="cover" />
+                    <Image src={Classroom} alt='classroom' boxSize={['40px', '60px', '80px', '100px']} objectFit="cover" />
                 </Link >
                 <Link>
                     <Image src={Github} alt='github' boxSize={['40px', '60px', '80px', '100px']} />
                 </Link >
-                 <Link>
+                <Link>
                     <Image src={Codewars} alt='codewars' boxSize={['40px', '60px', '80px', '100px']} />
                 </Link >
-                 <Link>
+                <Link>
                     <Image src={Schology} alt='schology' boxSize={['40px', '60px', '80px', '100px']} />
                 </Link >
             </Flex>

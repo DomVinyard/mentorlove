@@ -3,7 +3,7 @@ import {Heading, Flex,Input,Button,Stack } from "@chakra-ui/react";
 
 function Footer() {
   return (
-    <Flex alignItems={'center'}  direction={'column'} bg={'#4E5462'} color='#FFFFFF' h='100vh' justifyContent={'center'}>
+    <Flex alignItems={'center'} id='pricing' direction={'column'} bg={'#4E5462'} color='#FFFFFF' h='100vh' justifyContent={'center'}>
     <Stack w='50%' textAlign={'center'} spacing={'6'} display='flex' justifyContent={'center'} alignItems={'center'}  direction={'column'}>
      <Heading
         color="white"
