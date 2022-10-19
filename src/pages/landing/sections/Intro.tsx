@@ -1,7 +1,6 @@
 import {
   Heading,
   Stack,
-  Box,
   Text,
   Button,
   Image,
@@ -18,24 +17,25 @@ import Classroom from "../../../assets/class.png";
 function Intro() {
   return (
     <Flex
-      alignItems={"center"}
-      justifyContent="center"
+      alignItems={{base:'start',md:"center"}}
+      justifyContent='center'
       w="full"
       bg="#202020"
       height={"85vh"}
+      
     >
-      <Flex flexDirection={["column", "row"]} w="80vw" bg={'red'}>
-        <Stack height={"390px"} w="400px" color="white" spacing={8}>
-          <Heading fontSize={["24px", "34px", "44px"]}>
+      <Flex flexDirection={{base:"column", md:"row"}} maxW="940px"  w={{base:'80%',md:"full"}}>
+        <Stack height={"390px"} w={{base:'full',md:"400px"}} color="white" spacing={8} >
+          <Heading fontSize={{base:'36px', md:'44px'}} pt={{base:'4',md:''}}>
             {" "}
             Help your trainees stay on track
           </Heading>
-          <Text fontSize={["18px", "20px", "28px"]}>
+          <Text fontSize={{base:"18px", md:"28px"}}>
             The automated mentorship platform for companies and schools.
           </Text>
           <HStack spacing="20px" direction="row" align="center">
             <Button
-              w="9em"
+              w={{base:'135px', md:"9em"}}
               fontSize="20px"
               bgImage={BtnImg}
               bgPosition="center"
@@ -43,8 +43,8 @@ function Intro() {
               bgSize="cover"
             ></Button>
             <Button
-              w="9em"
-              fontSize={["12px", "16px", "20px"]}
+               w={{base:'135px', md:"9em"}}
+              fontSize={{base:"18px", md:"20px"}}
               bgColor="gray.600"
             >
               Learn More
@@ -52,13 +52,12 @@ function Intro() {
           </HStack>
         </Stack>
         <Spacer />
-        <Stack height={"390px"} w="400px" position="relative">
+        <Stack height={"390px"} w={{base:'full',md:"400px"}} position="relative">
           <Image
             src={HomeImage}
             boxSize="400px"
-            width="300px"
-            objectFit="cover"
-            objectPosition={["80%", "68%"]}
+            width={{base:'230px',md:"300px"}}
+            objectFit="cover"           
           />
           <Flex
             flexDirection="column"

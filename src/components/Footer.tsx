@@ -11,9 +11,9 @@ function Footer() {
       >
        Mentor is invite-only, sign up now for early access
       </Heading>
-      <Input variant='unstyled' borderRadius={'none'} placeholder='you@email.com' fontSize='xl' p='15px' width={'25em'} bg={'#000000'}/>
+      <Input variant='unstyled' borderRadius={'none'} placeholder='you@email.com' fontSize='xl' p='15px' width={{base:'17em', md:'25em'}} bg={'#000000'}/>
 
-      <Button bg='#2D9CDB' borderRadius={'none'}  fontSize='xl' p='25px' width={'20em'}>Request early access</Button>
+      <Button bg='#2D9CDB' borderRadius={'none'}  fontSize='xl' p='25px'width={{base:'12em', md:'20em'}}>Request early access</Button>
      </Stack>
     </Flex>
   );

@@ -4,12 +4,14 @@ import logo from '../assets/logo.png'
   function Navbar() {
     return (  
       <VStack  bg='#202020' color='#FFFFFF' >
-        <Flex  h={'15vh'} maxW='940px'  bg='red' w='full' justifyContent={'space-between'} alignItems='center'>
-          <Image src={logo} h={{base:'8',md:'10',lg: '12'}} w={{base:'7em',md:'auto',lg:'auto'}} bg='pink' />
-          <Link href='/' fontSize={{ base: '1.2em', md: '1.4em', lg: '1.6em' }}>Home</Link>
-          <Link href='#features'>Features</Link>
-          <Link href="#pricing">Pricing</Link>
-          <Link href='/' fontSize={{ base: '1.2em', md: '1.4em', lg: '1.6em' }}>Log In</Link>
+        <Flex  h={'15vh'} maxW='940px'   w='full' justifyContent={'space-between'} alignItems='center' px={{base:'4',md:'0'}}>
+          <Image src={logo} h={{base:'8',md:'12'}}  pb={{base:'1',md:'3'}}/>
+     
+          <Link href='/' fontSize={{  md: '20px' }} display={{base:'none',md:'inline'}}>Home</Link>
+          <Link fontSize={{ md: '20px' }} display={{base:'none',md:'inline'}} href='#features'>Features</Link>
+          <Link  fontSize={{ md: '20px' }} display={{base:'none',md:'inline'}} href="#pricing">Pricing</Link>
+        
+          <Link href='/' fontSize={{ base: '18px', md: '20px' }}>Log In</Link>
         </Flex>
       </VStack>  
     )
