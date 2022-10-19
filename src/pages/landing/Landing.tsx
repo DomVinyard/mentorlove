@@ -3,13 +3,13 @@ import ProductTour from "./sections/ProductTour";
 import Intro from "./sections/Intro";
 import NeedSupport from "./sections/NeedSupport";
 import TraineeData from "./sections/TraineeData";
-import UpdateMentor from "./sections/UpdateMentor";
+import Success from "./sections/Success";
 
 function Landing() {
   return (
     <Box>
        <Intro/>
-       <UpdateMentor/>
+       <Success/>
        <NeedSupport/>
        <TraineeData/>
        <ProductTour/>
