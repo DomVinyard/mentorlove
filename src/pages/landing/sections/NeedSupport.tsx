@@ -4,13 +4,13 @@ import Support from '../../../components/NeedSupport'
 
 function NeedSupport() {
   return (
-    <Flex alignItems={'center'}  direction={'column'} w='100vw'  pt='100px'>
-        <Box w='60vw' >
-       <Heading fontSize={'40px'}  textAlign={'center'} pb="40px" color='#CB4D4D'>
+    <Flex alignItems={'center'}  direction={'column'} w='100vw'  pt={{base:'30px',md:'70px'}} >
+        <Box maxW='940px'   w='full' px={{base:'20px',md:'100px'}}  >
+       <Heading fontSize={{base:'28px',md:'40px'}}  textAlign={'center'} pb="30px" color='#CB4D4D' >
        Automatically flag when trainees are falling behind or need support
       </Heading>    
     </Box>
-    <Box  w='80vw' height={'165px'} bg='#FEF0EF' mb='60px'>
+    <Box   maxW='940px'   w='full' height={{base:'80px',md:'170px'}} bg='#FEF0EF' >
     <Support/>
     </Box>
     </Flex>

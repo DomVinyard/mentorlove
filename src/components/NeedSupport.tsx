@@ -3,44 +3,37 @@ import Arrow from '../assets/redarrow.png'
 
 function NeedSupport() {
     return (
-        <VStack spacing={4}>
-            <HStack spacing={0} w='80%'  mt='-25px'  >
-                <Box w='15%' h='100px' bg='#EFDCDB' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                    <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' p={'2'}  boxSize={'5em'}  />
+        <VStack spacing={4} >
+            <HStack spacing={0} w={{base:'350px', md:'750px'}}  mt='-25px'  >
+                <Box w={{base:'60px',md:'115px'}} h={{base:'60px',md:'100px'}}  bg='#EFDCDB' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
+                    <Avatar name='Dan Abrahmov' src='https://bit.ly/dan-abramov' p={{base:'0',md:'2'}}  boxSize={{base:'2.5em',md:'5em'}} />
                 </Box>
-
-
-                <Box w='70%' h='100px' bg='lighterGray' p='3'>
+                <Box pl={{base:'4px',md:'8px'}} w={{base:'240px',md:'520px'}} h={{base:'60px',md:'100px'}} bg='#F5F5F5' display='flex' flexDirection='column' alignItems='start' justifyContent='center' fontSize={{base:'10px',md:'20px'}}>
                     <Text fontWeight='bold'>Jose</Text>
-                    <Text display='flex' flexDirection='row'  alignItems='center'><Image src={Arrow} boxSize='1em' mr='0.5em'/>  Did not submit latest task on time</Text>
+                    <Text display='flex' flexDirection='row'  alignItems='center'><Image src={Arrow} boxSize={{base:'10px',md:'18px'}} mr={{base:'4px',md:'8px'}} /> Did not submit latest task on time</Text>
                 </Box>
-                <Box w='15%' h='100px' bg='lighterGray' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={'2em'} />
-                    <Text fontSize='10px'>2 hour ago</Text>
+                <Box  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
+                    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={{base:'1.5em',md:'2em'}}/>
+                    <Text fontSize={{base:'7px',md:'12px'}}>4 days ago</Text>
                 </Box>
             </HStack>
 
-
-
-            <HStack spacing={0} w='80%'   >
-                <Box w='15%' h='100px' bg='#EFDCDB' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                <Avatar name='Ryan Florence' src='https://bit.ly/ryan-florence' p={'2'}  boxSize={'5em'}  />
+            <HStack spacing={0} w={{base:'350px', md:'750px'}}  mt='-25px'  >
+                <Box w={{base:'60px',md:'115px'}} h={{base:'60px',md:'100px'}}    bg='#EFDCDB' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
+                    <Avatar name='Dan Abrahmov' src='https://bit.ly/code-beast' p={{base:'0',md:'2'}} boxSize={{base:'2.5em',md:'5em'}} />
                 </Box>
-
-
-                <Box w='70%' h='100px' bg='lighterGray' p='3'>
+                <Box pl={{base:'4px',md:'8px'}} w={{base:'240px',md:'520px'}} h={{base:'60px',md:'100px'}} bg='#F5F5F5' display='flex' flexDirection='column' alignItems='start' justifyContent='center' fontSize={{base:'10px',md:'20px'}}>
                     <Text fontWeight='bold'>Dom</Text>
-                    <Text display='flex' flexDirection='row'  alignItems='center'><Image src={Arrow} boxSize='1em' mr='0.5em'/> Needs help with time management</Text>
+                    <Text display='flex' flexDirection='row'   alignItems='center'><Image src={Arrow} boxSize={{base:'10px',md:'18px'}} mr={{base:'4px',md:'8px'}} />Needs help with time management</Text>
                 </Box>
-                <Box w='15%' h='100px' bg='lighterGray' display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={'2em'} />
-                    <Text fontSize='10px'>6 hour ago</Text>
+                <Box position='relative'  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  >
+                    <Avatar name='Kent Dodds' src='https://bit.ly/ryan-florence'  boxSize={{base:'1.5em',md:'2em'}} right={{base:'20px',md:'50px'}} top={{base:'15px',md:'25px'}} position={'absolute'}/>
+                    <Avatar name='Kent Dodds' src='https://bit.ly/prosper-baba'  boxSize={{base:'1.5em',md:'2em'}} right={{base:'5px',md:'25px'}}  top={{base:'15px',md:'25px'}} position={'absolute'}/>
+                    <Text fontSize={{base:'7px',md:'12px'}} position={'absolute'} right={{base:'10px',md:'30px'}} top={{base:'45px',md:'70px'}}>20 mins ago</Text>
                 </Box>
-            </HStack>
-                  
-
+            </HStack>       
         </VStack>
     )
 }
 
-export default NeedSupport
+export default NeedSupport;

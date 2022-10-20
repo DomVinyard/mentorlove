@@ -5,9 +5,9 @@ import SuccessCart from '../../../components/SuccessCart'
 
 function Success() {
   return (
-    <Box  id='features'  w='100vw'  bg='pink.800' pt={{base:'150px',md:''}}>
+    <Box  id='features'  w='100vw'  pt={{base:'150px',md:''}}>
       <Flex alignItems={'center'}  direction={'column'} >
-        <Box  maxW='940px'   w='full'  >
+        <Box  maxW='940px'   w='full' px={{base:'',md:'100px'}} >
        <Heading fontSize={{base:'28px',md:'40px'}} textAlign={'center'} pb="1.5em" color='green'>
        Get automatic trainee updates from mentors, coaches and teachers 
       </Heading>    

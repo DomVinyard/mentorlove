@@ -14,7 +14,7 @@ function SuccessCart() {
                 </Box>
                 <Box  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
                     <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={{base:'1.5em',md:'2em'}}/>
-                    <Text fontSize={{base:'7px',md:'12px'}}>2 hour ago</Text>
+                    <Text fontSize={{base:'7px',md:'12px'}}>2 hours ago</Text>
                 </Box>
             </HStack>
 
@@ -24,11 +24,12 @@ function SuccessCart() {
                 </Box>
                 <Box pl={{base:'4px',md:'8px'}} w={{base:'240px',md:'520px'}} h={{base:'60px',md:'100px'}} bg='#F5F5F5' display='flex' flexDirection='column' alignItems='start' justifyContent='center' fontSize={{base:'10px',md:'20px'}}>
                     <Text fontWeight='bold'>Maria</Text>
-                    <Text display='flex' flexDirection='row'  alignItems='center'><Image src={Arrow} boxSize={{base:'10px',md:'18px'}} mr={{base:'4px',md:'8px'}} /> Showing excellent leadership skills</Text>
+                    <Text display='flex' flexDirection='row'   alignItems='center'><Image src={Arrow} boxSize={{base:'10px',md:'18px'}} mr={{base:'4px',md:'8px'}} /> Showing excellent leadership skills</Text>
                 </Box>
-                <Box  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
-                    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={{base:'1.5em',md:'2em'}}/>
-                    <Text fontSize={{base:'7px',md:'12px'}}>2 hour ago</Text>
+                <Box position='relative'  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  >
+                    <Avatar name='Kent Dodds' src='https://bit.ly/kent-c-dodds'  boxSize={{base:'1.5em',md:'2em'}} right={{base:'20px',md:'50px'}} top={{base:'15px',md:'25px'}} position={'absolute'}/>
+                    <Avatar name='Kent Dodds' src='https://bit.ly/dan-abramov'  boxSize={{base:'1.5em',md:'2em'}} right={{base:'5px',md:'25px'}}  top={{base:'15px',md:'25px'}} position={'absolute'}/>
+                    <Text fontSize={{base:'7px',md:'12px'}} position={'absolute'} right={{base:'10px',md:'30px'}} top={{base:'45px',md:'70px'}}>6 hours ago</Text>
                 </Box>
             </HStack>
 
@@ -42,7 +43,7 @@ function SuccessCart() {
                 </Box>
                 <Box  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
                     <Avatar name='Kent Dodds' src='https://bit.ly/ryan-florence'  boxSize={{base:'1.5em',md:'2em'}}/>
-                    <Text fontSize={{base:'7px',md:'12px'}}>2 hour ago</Text>
+                    <Text fontSize={{base:'7px',md:'12px'}}>2 days ago</Text>
                 </Box>
             </HStack>
             <HStack spacing={0} w={{base:'350px', md:'750px'}}  mt='-25px'  >
@@ -55,7 +56,7 @@ function SuccessCart() {
                 </Box>
                 <Box  bg='#F5F5F5' w={{base:'50px',md:'115px'}} h={{base:'60px',md:'100px'}}  display='flex' flexDirection='column' alignItems='center' justifyContent='center'>
                     <Avatar name='Kent Dodds' src='https://bit.ly/sage-adebayo'  boxSize={{base:'1.5em',md:'2em'}}/>
-                    <Text fontSize={{base:'7px',md:'12px'}}>2 hour ago</Text>
+                    <Text fontSize={{base:'7px',md:'12px'}}>14 hours ago</Text>
                 </Box>
             </HStack> 
 
