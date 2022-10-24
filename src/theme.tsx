@@ -16,7 +16,7 @@ const customTheme = extendTheme({
     blue: "#2A87A9",
     btnBlue: "#4E5462",
   },
-  components: {},
+ 
  
 });
 

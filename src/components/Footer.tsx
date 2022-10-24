@@ -1,21 +1,20 @@
 import {useState} from "react"
 import { Flex, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
-import axios from "axios";
+// import axios from "axios";
 
 function Footer() {
   const [email, setIEmail] = useState("")
   const handleSubmit = () => {
-    axios({
-      method:"post",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      url:"https://hooks.slack.com/workflows/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",
-      data:{
-        "email":email
-      }
-    }).then(data => console.log(data)).catch(err => console.log(err))
-  }
+    fetch('https://hooks.slack.com/workflows/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', {
+  method: 'POST',
+  headers:{
+          "Content-Type":"application/json"
+        },
+  body: JSON.stringify({"email": email})
+}).then(response => response.json()).catch(err => console.log(err))
+}
+
+
   return (
     <Flex
       alignItems={"center"}
