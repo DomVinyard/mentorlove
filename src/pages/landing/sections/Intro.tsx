@@ -52,21 +52,24 @@ function Intro() {
             The automated mentorship platform for companies and schools.
           </Text>
           <HStack spacing="20px" direction="row" align="center">
-            <Button
-              width={{ base: "140px", sm: "170px", md: "140px", lg: "200px" }}
-              bgImage={BtnImg}
-              bgPosition="center"
-              bgRepeat="no-repeat"
-              bgSize="cover"
-              height={{ base: "40px", sm: "50px", md: "45px", lg: "50px" }}
-            ></Button>
-            <Link href="#features">
+            <Link href="#pricing">
+              <Button
+                width={{ base: "140px", sm: "170px", md: "140px", lg: "200px" }}
+                bgImage={BtnImg}
+                bgPosition="center"
+                bgRepeat="no-repeat"
+                bgSize="cover"
+                height={{ base: "40px", sm: "50px", md: "45px", lg: "50px" }}
+              ></Button>
+            </Link>
+            <Link href="#features" >
               {" "}
               <Button
                 width={{ base: "140px", sm: "170px", md: "144px", lg: "200px" }}
                 fontSize={{ base: "18px", sm: "20px", md: "18px", lg: "24px" }}
-                bgColor="gray.600"
+              bg="rgba(196, 196, 196, 0.22)"
                 height={{ base: "40px", sm: "50px", md: "45px", lg: "50px" }}
+               
               >
                 Learn More
               </Button>

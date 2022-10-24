@@ -1,6 +1,21 @@
+import {useState} from "react"
 import { Flex, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import axios from "axios";
 
 function Footer() {
+  const [email, setIEmail] = useState("")
+  const handleSubmit = () => {
+    axios({
+      method:"post",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      url:"https://hooks.slack.com/workflows/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",
+      data:{
+        "email":email
+      }
+    }).then(data => console.log(data)).catch(err => console.log(err))
+  }
   return (
     <Flex
       alignItems={"center"}
@@ -13,8 +28,7 @@ function Footer() {
       mt="100px"
     >
       <FormControl
-        w={{ base: "90%", md: "50%" }}
-        // textAlign={"center"}
+        w={{ base: "90%", md: "50%" }}            
         display="flex"
         justifyContent={"center"}
         alignItems={"center"}
@@ -27,6 +41,8 @@ function Footer() {
           Mentor is invite-only, sign up now for early access
         </FormLabel>
         <Input
+        value={email}
+        onChange={(e) => setIEmail(e.target.value)}
           type="email"
           variant="unstyled"
           borderRadius={"none"}
@@ -44,6 +60,7 @@ function Footer() {
           fontSize="xl"
           p="25px"
           width={{ base: "350px", sm: "380px", md: "360px", lg: "380px" }}
+          onClick={handleSubmit}
         >
           Request early access
         </Button>
