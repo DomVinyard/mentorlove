@@ -17,6 +17,7 @@ const customTheme = extendTheme({
     btnBlue: "#4E5462",
   },
   components: {},
+ 
 });
 
 export default customTheme;

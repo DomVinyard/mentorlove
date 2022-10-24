@@ -8,6 +8,7 @@ import {
   HStack,
   Avatar,
   Spacer,
+  Link,
 } from "@chakra-ui/react";
 import BtnImg from "../../../assets/addtoslack.png";
 import HomeImage from "../../../assets/imghome.png";
@@ -17,56 +18,83 @@ import Classroom from "../../../assets/class.png";
 function Intro() {
   return (
     <Flex
-      alignItems={{base:'start',md:"center"}}
-      justifyContent='center'
+      alignItems={{ base: "start", md: "center" }}
+      justifyContent="center"
       w="full"
       bg="#202020"
       height={"85vh"}
-      
     >
-      <Flex flexDirection={{base:"column", md:"row"}} maxW="940px"  w={{base:'80%',md:"full"}}>
-        <Stack height={"390px"} w={{base:'full',md:"400px"}} color="white" spacing={8} >
-          <Heading fontSize={{base:'36px', md:'44px'}} pt={{base:'4',md:''}}>
-            {" "}
+      <Flex
+        flexDirection={{ base: "column", md: "row" }}
+        maxW="940px"
+        mt={{ base: "70px", sm: "70px", md: "0px", lg: "0px" }}
+        width={{ base: "80%", sm: "80%", md: "90%", lg: "100%" }}
+      >
+        <Stack
+          height={"390px"}
+          w={{ base: "full", sm: "full", md: "380px", lg: "400px" }}
+          color="white"
+          spacing={8}
+        >
+          <Heading
+            fontSize={{ base: "36px", sm: "36px", md: "36px", lg: "44px" }}
+            fontWeight={700}
+            fontStyle="bold"
+          >
             Help your trainees stay on track
           </Heading>
-          <Text fontSize={{base:"18px", md:"28px"}}>
+          <Text
+            fontSize={{ base: "22px", sm: "26px", md: "22px", lg: "26px" }}
+            fontFamily="roboto"
+            fontStyle={"regular"}
+            fontWeight={400}
+          >
             The automated mentorship platform for companies and schools.
           </Text>
           <HStack spacing="20px" direction="row" align="center">
             <Button
-              w={{base:'135px', md:"9em"}}
-              fontSize="20px"
+              width={{ base: "140px", sm: "170px", md: "140px", lg: "200px" }}
               bgImage={BtnImg}
               bgPosition="center"
               bgRepeat="no-repeat"
               bgSize="cover"
+              height={{ base: "40px", sm: "50px", md: "45px", lg: "50px" }}
             ></Button>
-            <Button
-               w={{base:'135px', md:"9em"}}
-              fontSize={{base:"18px", md:"20px"}}
-              bgColor="gray.600"
-            >
-              Learn More
-            </Button>
+            <Link href="#features">
+              {" "}
+              <Button
+                width={{ base: "140px", sm: "170px", md: "144px", lg: "200px" }}
+                fontSize={{ base: "18px", sm: "20px", md: "18px", lg: "24px" }}
+                bgColor="gray.600"
+                height={{ base: "40px", sm: "50px", md: "45px", lg: "50px" }}
+              >
+                Learn More
+              </Button>
+            </Link>
           </HStack>
         </Stack>
         <Spacer />
-        <Stack height={"390px"} w={{base:'full',md:"400px"}} position="relative">
+        <Stack
+          height={"390px"}
+          w={{ base: "full", sm: "full", md: "400px" }}
+          position="relative"
+          mt={{ base: "60px", sm: "60px", md: "0px", lg: "0px" }}
+          fontSize={{ base: "14px", sm: "14px", md: "12px", lg: "14px" }}
+        >
           <Image
             src={HomeImage}
-            boxSize="400px"
-            width={{base:'230px',md:"300px"}}
-            objectFit="cover"           
+            boxSize={{ base: "400px", sm: "440px", md: "400px", lg: "400px" }}
+            width={{ base: "250px", sm: "80%", md: "300px", lg: "300px" }}
+            objectFit="cover"
           />
           <Flex
             flexDirection="column"
             pos="absolute"
-            top="100"
-            p="2"
+            top={{ base: "100", sm: "125", md: "100", lg: "100" }}
+            p={{ base: "2", sm: "2", md: "2" }}
             right="0"
-            width="220px"
-            height="130px"
+            width={{ base: "220px", sm: "240px", md: "200px", lg: "230px" }}
+            height={{ base: "130px", sm: "130px", md: "130px", lg: "130px" }}
             bg="#FFFFFF"
             borderRadius="xl"
           >
@@ -74,25 +102,25 @@ function Intro() {
               <Avatar src={M} p="2" />
               <Text fontWeight="bold">To Coach Sadia</Text>
             </HStack>
-            <Text pl="2" pb="2" fontSize="14px">
+            <Text pl="2" pb="2">
               How is Trainee Maria doing?
             </Text>
             <HStack>
               <Button
                 ml="2"
-                width="90px"
+                width={{ base: "90px", sm: "110px" }}
                 bg="gray.200"
                 color="black"
-                fontSize="12px"
+                fontSize={"12px"}
                 height="25px"
               >
                 👍 On Track
               </Button>
               <Button
-                width="90px"
+                width={{ base: "90px", sm: "110px" }}
                 bg="#CE365C"
                 color="white"
-                fontSize="12px"
+                fontSize={"12px"}
                 height="25px"
               >
                 Needs Support
@@ -102,11 +130,11 @@ function Intro() {
           <Flex
             flexDirection="column"
             pos="absolute"
-            top="240"
-            p="2"
-            right="45"
-            width="220px"
-            height="130px"
+            top={{ base: "240", sm: "275", md: "240", lg: "240" }}
+            p={{ base: "2", sm: "2", md: "2" }}
+            right={{ base: "30", sm: "35", md: "" }}
+            width={{ base: "220px", sm: "240px", md: "200px", lg: "230px" }}
+            height={{ base: "130px", sm: "120px", md: "130px", lg: "130px" }}
             bg="#FFFFFF"
             borderRadius="xl"
           >
@@ -114,15 +142,14 @@ function Intro() {
               <Avatar src={Classroom} p="2" />
               <Text fontWeight="bold"> Google Classroom</Text>
             </HStack>
-            <Text pl="2" pb="2" fontSize="14px">
+            <Text pl="2" pb="2">
               Trainee Jose is falling behind
             </Text>
             <Button
               ml="2"
-              width="180px"
+              width={{ base: "180px", sm: "160px", md: "160px", lg: "180px" }}
               bg="gray.200"
               color="black"
-              fontSize="12px"
               height="25px"
             >
               Request catch-up
