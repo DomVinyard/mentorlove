@@ -6,7 +6,6 @@ import Integrations from "./sections/Integrations";
 import ProductTour from "./sections/ProductTour";
 import Pricing from "./sections/Pricing";
 
-// Theme
 const theme = extendTheme({
   colors: {
     red: { 100: "#FEF0EF", 300: "#EFDCDB", 500: "#CB4D4D", 700: "#CE365C" },
@@ -42,15 +41,8 @@ export const strings = {
   },
 };
 
-// Container for section content
 export const breakpointPx = 900;
-export const Inner = ({
-  children,
-  fullOnMobile,
-}: {
-  children: React.ReactNode;
-  fullOnMobile?: boolean;
-}) => (
+export const Inner = ({ children, fullOnMobile }: InnerProps) => (
   <Box
     maxW={{ base: fullOnMobile ? "100%" : "90%", md: `${breakpointPx}px` }}
     w={fullOnMobile ? "100%" : "90%"}
@@ -59,8 +51,7 @@ export const Inner = ({
   />
 );
 
-// Section title
-export const Title = ({ text, color }: { text: string; color: string }) => (
+export const Title = ({ text, color }: TitleProps) => (
   <Heading
     maxW={"600px"}
     mx={"auto"}
@@ -73,7 +64,6 @@ export const Title = ({ text, color }: { text: string; color: string }) => (
   />
 );
 
-// App sections
 const App = () => (
   <ChakraProvider theme={theme}>
     <Header />
@@ -83,4 +73,15 @@ const App = () => (
     <Pricing />
   </ChakraProvider>
 );
+
 export default App;
+
+type InnerProps = {
+  children: React.ReactNode;
+  fullOnMobile?: boolean;
+};
+
+type TitleProps = {
+  text: string;
+  color: string;
+};
