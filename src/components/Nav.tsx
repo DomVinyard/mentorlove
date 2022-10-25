@@ -1,6 +1,6 @@
 import { Flex, Link, VStack, Image } from "@chakra-ui/react";
 
-const LinkItem = ({
+const NavLinkItem = ({
   text,
   href,
   hideOnMobile = false,
@@ -11,8 +11,8 @@ const LinkItem = ({
 }) => (
   <Link
     href={href}
-    fontSize={{ base: 16, lg: 18 }}
-    display={{ base: hideOnMobile ? "none" : "block", lg: "block" }}
+    fontSize={{ base: 16, md: 18 }}
+    display={{ base: hideOnMobile ? "none" : "block", md: "block" }}
     children={text}
   />
 );
@@ -20,18 +20,21 @@ const LinkItem = ({
 const Nav = () => (
   <VStack bg="#202020" color="#FFFFFF">
     <Flex
-      mt={{ base: 8, lg: 12 }}
+      mt={{ base: 8, md: 12 }}
       width={"100%"}
       justifyContent={"space-between"}
       alignItems="center"
     >
       <Link href="/">
-        <Image src={"assets/logo.png"} w={{ base: 48, lg: 64 }} />
+        <Image src={"images/logo.png"} w={{ base: 48, md: 64 }} />
       </Link>
-      <LinkItem text="Features" href="#features" hideOnMobile />
-      <LinkItem text="Pricing" href="#pricing" hideOnMobile />
-      <LinkItem text="Log In" href="/" />
+      <NavLinkItem text="Features" href="#features" hideOnMobile />
+      <NavLinkItem text="Pricing" href="#pricing" hideOnMobile />
+      <strong>
+        <NavLinkItem text="Log In" href="/" />
+      </strong>
     </Flex>
   </VStack>
 );
+
 export default Nav;

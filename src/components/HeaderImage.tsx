@@ -1,99 +1,99 @@
-import {
-  Stack,
-  Text,
-  Button,
-  Image,
-  Flex,
-  HStack,
-  Avatar,
-} from "@chakra-ui/react";
-const HeaderImage = () => {
+import { Stack, Text, Button, Flex, HStack, Avatar } from "@chakra-ui/react";
+import { breakpointPx } from "./Inner";
+import { useWindowWidth } from "@react-hook/window-size/throttled";
+
+type InfoBubbleProps = {
+  avatar: string;
+  heading: string;
+  text: string;
+  offsetPx: number;
+  buttons: any;
+};
+
+const InfoButton = ({ text, background, color }: any) => (
+  <Button
+    width={"100%"}
+    bg={background}
+    color={color}
+    fontSize={"12px"}
+    height="32px"
+    pointerEvents="none"
+    children={text}
+  />
+);
+
+const InfoBubble = ({
+  heading,
+  avatar,
+  text,
+  offsetPx,
+  buttons,
+}: InfoBubbleProps) => {
+  const windowWidth = useWindowWidth();
+  const maxOffset = Math.max(windowWidth - (breakpointPx + offsetPx), 10);
   return (
-    <Stack
-      height={"390px"}
-      w={{ base: "full", sm: "full", md: "400px" }}
-      position="relative"
-      mt={{ base: "60px", sm: "60px", md: "0px", lg: "0px" }}
-      fontSize={{ base: "14px", sm: "14px", md: "12px", lg: "14px" }}
-      translateX={12}
+    <Flex
+      flexDirection="column"
+      p={4}
+      bg="#FFFFFF"
+      borderRadius="xl"
+      transform={{
+        base: `translateX(${offsetPx}px)`,
+        md: `translateX(${Math.min(offsetPx, maxOffset)}px)`,
+      }}
+      alignItems={"flex-start"}
+      boxShadow={"0px 3px 3px rgba(0, 0, 0, 0.3)"}
     >
-      <Image
-        src={"assets/imghome.png"}
-        boxSize={{ base: "400px", sm: "440px", md: "400px", lg: "400px" }}
-        width={{ base: "250px", sm: "80%", md: "300px", lg: "300px" }}
-        objectFit="cover"
-      />
-      <Flex
-        flexDirection="column"
-        pos="absolute"
-        top={{ base: "100", sm: "125", md: "100", lg: "100" }}
-        p={{ base: "2", sm: "2", md: "2" }}
-        right="0"
-        width={{ base: "220px", sm: "240px", md: "200px", lg: "230px" }}
-        height={{ base: "130px", sm: "130px", md: "130px", lg: "130px" }}
-        bg="#FFFFFF"
-        borderRadius="xl"
-      >
-        <HStack>
-          <Avatar src={"assets/m.png"} p="2" />
-          <Text fontWeight="bold">To Coach Sadia</Text>
+      <HStack spacing={0}>
+        <Avatar src={avatar} h={6} w={6} mr={1.5} />
+        <Text fontWeight="bold">{heading}</Text>
+      </HStack>
+      <Text py={1} children={text} />
+      {buttons.length && (
+        <HStack mt={1} justifyContent={"space-around"} width={"100%"}>
+          {buttons.map((button: any) => (
+            <InfoButton {...button} />
+          ))}
         </HStack>
-        <Text pl="2" pb="2">
-          How is Trainee Maria doing?
-        </Text>
-        <HStack>
-          <Button
-            ml="2"
-            width={{ base: "90px", sm: "110px" }}
-            bg="gray.200"
-            color="black"
-            fontSize={"12px"}
-            height="25px"
-          >
-            👍 On Track
-          </Button>
-          <Button
-            width={{ base: "90px", sm: "110px" }}
-            bg="#CE365C"
-            color="white"
-            fontSize={"12px"}
-            height="25px"
-            pointerEvents="none"
-          >
-            Needs Support
-          </Button>
-        </HStack>
-      </Flex>
-      <Flex
-        flexDirection="column"
-        pos="absolute"
-        top={{ base: "240", sm: "275", md: "240", lg: "240" }}
-        p={{ base: "2", sm: "2", md: "2" }}
-        right={{ base: "30", sm: "35", md: "" }}
-        width={{ base: "220px", sm: "240px", md: "200px", lg: "230px" }}
-        height={{ base: "130px", sm: "120px", md: "130px", lg: "130px" }}
-        bg="#FFFFFF"
-        borderRadius="xl"
-      >
-        <HStack>
-          <Avatar src={"assets/class.png"} p="2" />
-          <Text fontWeight="bold"> Google Classroom</Text>
-        </HStack>
-        <Text pl="2" pb="2">
-          Trainee Jose is falling behind
-        </Text>
-        <Button
-          ml="2"
-          width={{ base: "180px", sm: "160px", md: "160px", lg: "180px" }}
-          bg="gray.200"
-          color="black"
-          height="25px"
-        >
-          Request catch-up
-        </Button>
-      </Flex>
-    </Stack>
+      )}
+    </Flex>
   );
 };
+
+const HeaderImage = () => (
+  <Stack
+    backgroundImage={"url(images/splash.png)"}
+    backgroundSize="cover"
+    boxSize={{ base: "400px", md: "400px" }}
+    width={{ base: "70%", md: "300px" }}
+    mb={{ base: 12, md: 0 }}
+    ml={{ base: 0, md: 3 }}
+    objectFit="cover"
+    alignItems={"flex-end"}
+    justifyContent={"flex-end"}
+    pb={6}
+    transform={{ base: "translateY(90px)", md: "translateY(0px)" }}
+  >
+    <InfoBubble
+      avatar="avatars/mentor.png"
+      heading="To Coach Sadia"
+      text="How is Trainee Maria doing?"
+      offsetPx={92}
+      buttons={[
+        { text: "👍 On Track", background: "gray.200", color: "black" },
+        { text: "Needs Support", background: "#CE365C", color: "white" },
+      ]}
+    />
+    <InfoBubble
+      avatar="logos/classroom_2.png"
+      heading="Google Classroom"
+      text="Trainee Jose is falling behind"
+      offsetPx={24}
+      buttons={[
+        { text: "Request catch-up", background: "gray.200", color: "black" },
+      ]}
+    />
+  </Stack>
+);
 
 export default HeaderImage;
