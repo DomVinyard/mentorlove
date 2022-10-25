@@ -1,5 +1,5 @@
 import { Flex, VStack, Heading, Box, Image, Text } from "@chakra-ui/react";
-import Product from "../../../assets/product.png";
+import Product from "../assets/product.png";
 
 function ProductTour() {
   return (
@@ -17,7 +17,7 @@ function ProductTour() {
         <Heading
           size={{ base: "xl", sm: "2xl", md: "xl", lg: "xl" }}
           textAlign={"center"}
-          color="#2A87A9"          
+          color="#2A87A9"
         >
           Mentor’s chatbot lives right inside Slack for instant check-ins
         </Heading>

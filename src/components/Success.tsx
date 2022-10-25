@@ -1,5 +1,5 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import SuccessCart from "../../../components/SuccessCart";
+import SuccessCart from "./SuccessCart";
 
 function Success() {
   return (

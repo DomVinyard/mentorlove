@@ -1,8 +1,8 @@
 import { Flex, Link, Image, VStack, Heading, Box } from "@chakra-ui/react";
-import Classroom from "../../../assets/classroom.png";
-import Github from "../../../assets/github.png";
-import Codewars from "../../../assets/codewars.png";
-import Schology from "../../../assets/schoology.png";
+import Classroom from "../assets/classroom.png";
+import Github from "../assets/github.png";
+import Codewars from "../assets/codewars.png";
+import Schology from "../assets/schoology.png";
 
 function TraineeData() {
   return (
