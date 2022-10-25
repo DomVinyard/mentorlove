@@ -1,4 +1,4 @@
-import { Flex, Link, VStack, Image } from "@chakra-ui/react";
+import { Flex, Image, Link, VStack } from "@chakra-ui/react";
 
 const NavLinkItem = ({
   text,
@@ -36,5 +36,4 @@ const Nav = () => (
     </Flex>
   </VStack>
 );
-
 export default Nav;

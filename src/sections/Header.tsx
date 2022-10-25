@@ -1,4 +1,5 @@
 import {
+  Box,
   Flex,
   Image,
   Text,
@@ -9,12 +10,10 @@ import {
   Avatar,
   Button,
 } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
-import Nav from "../components/Nav";
-import Inner from "../components/Inner";
-import { breakpointPx } from "../components/Inner";
+import { Inner, breakpointPx } from "../App";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import { strings } from "../data";
+import Nav from "./Nav";
 
 const HeaderIntro = () => (
   <Stack

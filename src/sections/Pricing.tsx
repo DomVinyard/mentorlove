@@ -1,7 +1,8 @@
+import { Flex } from "@chakra-ui/react";
 import { Button, FormControl, Input } from "@chakra-ui/react";
 import { useState } from "react";
 import { strings } from "../data";
-import SectionTitle from "./SectionTitle";
+import { Inner, Title } from "../App";
 const endpoint =
   "https://hooks.slack.com/workflows/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";
 
@@ -28,7 +29,7 @@ const Form = () => {
       flexDirection={"column"}
       mt={"-20vh"}
     >
-      <SectionTitle color="white" text={strings.form.title} />
+      <Title color="white" text={strings.form.title} />
       <Input
         value={email}
         onChange={(e) => setIEmail(e.target.value)}
@@ -57,4 +58,19 @@ const Form = () => {
     </FormControl>
   );
 };
-export default Form;
+
+const Pricing = () => (
+  <Flex
+    id="pricing"
+    h={"100vh"}
+    background="grey.900"
+    alignItems={"center"}
+    mt={{ base: 32, md: 48 }}
+  >
+    <Inner>
+      <Form />
+    </Inner>
+  </Flex>
+);
+
+export default Pricing;

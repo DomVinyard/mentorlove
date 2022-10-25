@@ -1,13 +1,16 @@
 import {
-  Box,
-  VStack,
-  Avatar,
-  Text,
-  Image,
-  Flex,
-  Stack,
   Center,
+  Box,
+  Flex,
+  VStack,
+  Image,
+  Text,
+  Avatar,
+  Stack,
 } from "@chakra-ui/react";
+import { strings, trainees } from "../data";
+import { Inner, Title } from "../App";
+
 const shiftAmountPx = 24;
 
 function TraineeCard({
@@ -111,4 +114,27 @@ const TraineeCards = ({ trainees, colors }: any) => (
   </Box>
 );
 
-export default TraineeCards;
+const SectionTrainees = () => (
+  <Box id="features">
+    <Inner fullOnMobile>
+      <Box>
+        <Inner>
+          <Title text={strings.traineeList.title1} color={"green.700"} />
+        </Inner>
+        <TraineeCards
+          trainees={trainees.positive}
+          colors={{ sectionBg: "green.100", traineeBg: "green.500" }}
+        />
+      </Box>
+      <Inner>
+        <Title text={strings.traineeList.title2} color={"red.500"} />
+      </Inner>
+      <TraineeCards
+        trainees={trainees.negative}
+        colors={{ sectionBg: "red.100", traineeBg: "red.300" }}
+      />
+    </Inner>
+  </Box>
+);
+
+export default SectionTrainees;
