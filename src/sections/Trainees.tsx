@@ -8,10 +8,63 @@ import {
   Avatar,
   Stack,
 } from "@chakra-ui/react";
-import { strings, trainees } from "../data";
-import { Inner, Title } from "../App";
+import { Inner, Title, strings } from "../App";
 
 const shiftAmountPx = 24;
+
+const data = {
+  positive: [
+    {
+      name: "Maria",
+      caption: "Helping other trainees with their coursework",
+      imgSrc: "maria.png",
+      arrowIcon: "arrow_green.png",
+      mentors: ["mentor2.png"],
+      latestUpdate: "2 hours ago",
+    },
+    {
+      name: "Luca",
+      caption: "Showing excellent leadership skills",
+      imgSrc: "luca.png",
+      arrowIcon: "arrow_green.png",
+      mentors: ["mentor3.png", "mentor5.png"],
+      latestUpdate: "20 mins ago",
+    },
+    {
+      name: "Nina",
+      caption: "Completed professional development workshop",
+      imgSrc: "dawn.png",
+      arrowIcon: "arrow_green.png",
+      mentors: ["mentor2.png"],
+      latestUpdate: "3 days ago",
+    },
+    {
+      name: "Mylo",
+      caption: "Personal study work is up to date",
+      imgSrc: "mylo.png",
+      mentors: ["mentor5.png", "mentor3.png"],
+      latestUpdate: "just now",
+    },
+  ],
+  negative: [
+    {
+      name: "Jose",
+      caption: "Did not submit latest task on time",
+      imgSrc: "jose.png",
+      arrowIcon: "arrow_red.png",
+      mentors: ["mentor2.png"],
+      latestUpdate: "1 week ago",
+    },
+    {
+      name: "Dom",
+      caption: "Needs help with time management",
+      imgSrc: "dom.png",
+      arrowIcon: "arrow_red.png",
+      mentors: ["mentor4.png", "mentor5.png"],
+      latestUpdate: "4 hours ago",
+    },
+  ],
+};
 
 function TraineeCard({
   name,
@@ -49,9 +102,7 @@ function TraineeCard({
         w={"100%"}
         justifyContent="center"
       >
-        <Text fontWeight="bold" pt={1}>
-          {name}
-        </Text>
+        <Text fontWeight="bold" pt={1} children={name} />
         <Text
           display="flex"
           pb={2}
@@ -122,7 +173,7 @@ const SectionTrainees = () => (
           <Title text={strings.traineeList.title1} color={"green.700"} />
         </Inner>
         <TraineeCards
-          trainees={trainees.positive}
+          trainees={data.positive}
           colors={{ sectionBg: "green.100", traineeBg: "green.500" }}
         />
       </Box>
@@ -130,7 +181,7 @@ const SectionTrainees = () => (
         <Title text={strings.traineeList.title2} color={"red.500"} />
       </Inner>
       <TraineeCards
-        trainees={trainees.negative}
+        trainees={data.negative}
         colors={{ sectionBg: "red.100", traineeBg: "red.300" }}
       />
     </Inner>

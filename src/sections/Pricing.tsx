@@ -1,8 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import { Button, FormControl, Input } from "@chakra-ui/react";
 import { useState } from "react";
-import { strings } from "../data";
-import { Inner, Title } from "../App";
+import { Inner, Title, strings } from "../App";
 const endpoint =
   "https://hooks.slack.com/workflows/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";
 

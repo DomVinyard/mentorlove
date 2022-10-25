@@ -5,7 +5,6 @@ import Trainees from "./sections/Trainees";
 import Integrations from "./sections/Integrations";
 import ProductTour from "./sections/ProductTour";
 import Pricing from "./sections/Pricing";
-export const breakpointPx = 900;
 
 // Theme
 const theme = extendTheme({
@@ -17,7 +16,34 @@ const theme = extendTheme({
   },
 });
 
+export const strings = {
+  header: {
+    title: "Help your trainees stay on track",
+    subtitle: "The automated mentorship platform for companies and schools.",
+    more: "Learn more",
+  },
+  traineeList: {
+    title1: "Get automatic trainee updates from mentors, coaches and teachers",
+    title2:
+      "Automatically flag when trainees are falling behind or need support",
+  },
+  integrations: {
+    title:
+      "Automatically enrich trainee data with pre-built or custom integrations",
+  },
+  video: {
+    title: "Mentor’s chatbot lives right inside Slack for instant check-ins",
+    caption: "Mentor for Slack, Product Tour (5 mins)",
+  },
+  form: {
+    title: "Mentor is invite-only",
+    placeholder: "you@email.com",
+    button: "Request access",
+  },
+};
+
 // Container for section content
+export const breakpointPx = 900;
 export const Inner = ({
   children,
   fullOnMobile,

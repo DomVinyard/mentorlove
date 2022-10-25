@@ -1,14 +1,6 @@
 import { Flex, Image, Link, VStack } from "@chakra-ui/react";
 
-const NavLinkItem = ({
-  text,
-  href,
-  hideOnMobile = false,
-}: {
-  text: string;
-  href: string;
-  hideOnMobile?: boolean;
-}) => (
+const NavLinkItem = ({ text, href, hideOnMobile }: NavLinkItemProps) => (
   <Link
     href={href}
     fontSize={{ base: 16, md: 18 }}
@@ -36,4 +28,11 @@ const Nav = () => (
     </Flex>
   </VStack>
 );
+
 export default Nav;
+
+type NavLinkItemProps = {
+  text: string;
+  href: string;
+  hideOnMobile?: boolean;
+};

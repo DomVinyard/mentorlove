@@ -1,14 +1,8 @@
 import { VStack, Grid } from "@chakra-ui/react";
-import { strings } from "../data";
-import { Inner, Title } from "../App";
+import { Inner, Title, strings } from "../App";
 import { GridItem, Image } from "@chakra-ui/react";
 
-type IntegrationProps = {
-  filename: string;
-  label?: string;
-};
-
-const IntegrationGridItem = ({ filename, label }: IntegrationProps) => (
+const IntegrationGridItem = ({ filename, label }: IntegratioGridItemProps) => (
   <GridItem marginX={"auto"}>
     <Image
       src={`logos/${filename}.png`}
@@ -50,3 +44,8 @@ const Integrations = () => (
 );
 
 export default Integrations;
+
+type IntegratioGridItemProps = {
+  filename: string;
+  label?: string;
+};

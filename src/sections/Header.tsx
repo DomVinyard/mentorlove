@@ -10,12 +10,12 @@ import {
   Avatar,
   Button,
 } from "@chakra-ui/react";
-import { Inner, breakpointPx } from "../App";
+import { Inner, breakpointPx, strings } from "../App";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
-import { strings } from "../data";
 import Nav from "./Nav";
+const { title, subtitle, more } = strings.header;
 
-const HeaderIntro = () => (
+const Left = () => (
   <Stack
     mb={8}
     w={{ base: "full", md: "420px" }}
@@ -23,18 +23,8 @@ const HeaderIntro = () => (
     spacing={8}
     maxW={{ base: "460px", md: "auto" }}
   >
-    <Heading
-      fontSize={{ base: "44px", md: "44px" }}
-      fontWeight={700}
-      fontStyle="bold"
-      children={strings.header.title}
-    />
-    <Text
-      fontSize={{ base: "24px", md: "26px" }}
-      fontStyle={"regular"}
-      fontWeight={400}
-      children={strings.header.subtitle}
-    />
+    <Heading fontSize={"5xl"} fontWeight={700} children={title} />
+    <Text fontSize={"2xl"} fontWeight={400} children={subtitle} />
     <HStack spacing="20px" direction="row" align="center">
       <Link href="#pricing">
         <Image
@@ -51,21 +41,13 @@ const HeaderIntro = () => (
           fontSize={{ base: "18px", md: "20px" }}
           bg="rgba(196, 196, 196, 0.22)"
           pointerEvents="none"
-          children={strings.header.more}
+          children={more}
           fontWeight="normal"
         />
       </Link>
     </HStack>
   </Stack>
 );
-
-type InfoBubbleProps = {
-  avatar: string;
-  heading: string;
-  text: string;
-  offsetPx: number;
-  buttons: any;
-};
 
 const InfoButton = ({ text, background, color }: any) => (
   <Button
@@ -117,15 +99,14 @@ const InfoBubble = ({
   );
 };
 
-const HeaderImage = () => (
+const Right = () => (
   <Stack
     backgroundImage={"url(images/splash.png)"}
     backgroundSize="cover"
-    boxSize={{ base: "400px", md: "400px" }}
+    height={"400px"}
     width={{ base: "70%", md: "300px" }}
     mb={{ base: 12, md: 0 }}
     ml={{ base: 0, md: 3 }}
-    objectFit="cover"
     alignItems={"flex-end"}
     justifyContent={"flex-end"}
     pb={6}
@@ -153,7 +134,7 @@ const HeaderImage = () => (
   </Stack>
 );
 
-const SectionHeader = () => (
+const Header = () => (
   <Box minH={"100vh"} background="grey.900" mb={{ base: 40, md: 0 }}>
     <Inner>
       <Stack minH={"100vh"}>
@@ -167,12 +148,20 @@ const SectionHeader = () => (
           justifyContent="space-between"
           transform={{ base: "none", md: "translateY(-5vh)" }}
         >
-          <HeaderIntro />
-          <HeaderImage />
+          <Left />
+          <Right />
         </Flex>
       </Stack>
     </Inner>
   </Box>
 );
 
-export default SectionHeader;
+export default Header;
+
+type InfoBubbleProps = {
+  avatar: string;
+  heading: string;
+  text: string;
+  offsetPx: number;
+  buttons: any;
+};

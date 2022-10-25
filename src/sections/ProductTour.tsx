@@ -1,6 +1,5 @@
 import { Center, VStack, Image, Text } from "@chakra-ui/react";
-import { Inner, Title } from "../App";
-import { strings } from "../data";
+import { Inner, Title, strings } from "../App";
 
 const ProductTour = () => (
   <VStack w="full" display="flex" justifyContent="center" alignItems="center">
