@@ -13,41 +13,43 @@ import {
 import { Inner, breakpointPx, strings } from "../App";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import Nav from "./Nav";
-const { title, subtitle, more } = strings.header;
 
-const Left = () => (
-  <Stack
-    mb={8}
-    w={{ base: "full", md: "420px" }}
-    color="white"
-    spacing={8}
-    maxW={{ base: "460px", md: "auto" }}
-  >
-    <Heading fontSize={"5xl"} fontWeight={700} children={title} />
-    <Text fontSize={"2xl"} fontWeight={400} children={subtitle} />
-    <HStack spacing="20px" direction="row" align="center">
-      <Link href="#pricing">
-        <Image
-          height={{ base: "40px", md: "50px" }}
-          width={{ base: "140px", md: "180px" }}
-          src={"images/addtoslack.png"}
-          alt="Add to Slack"
-        />
-      </Link>
-      <Link href="#features" textDecoration={"none"}>
-        <Button
-          width={{ base: "140px", md: "200px" }}
-          height={{ base: "40px", md: "50px" }}
-          fontSize={{ base: "18px", md: "20px" }}
-          bg="rgba(196, 196, 196, 0.22)"
-          pointerEvents="none"
-          children={more}
-          fontWeight="normal"
-        />
-      </Link>
-    </HStack>
-  </Stack>
-);
+const Left = () => {
+  const { title, subtitle, more } = strings.header;
+  return (
+    <Stack
+      mb={8}
+      w={{ base: "full", md: "420px" }}
+      color="white"
+      spacing={8}
+      maxW={{ base: "460px", md: "auto" }}
+    >
+      <Heading fontSize={"5xl"} fontWeight={700} children={title} />
+      <Text fontSize={"2xl"} fontWeight={400} children={subtitle} />
+      <HStack spacing="20px" direction="row" align="center">
+        <Link href="#pricing">
+          <Image
+            height={{ base: "40px", md: "50px" }}
+            width={{ base: "140px", md: "180px" }}
+            src={"images/addtoslack.png"}
+            alt="Add to Slack"
+          />
+        </Link>
+        <Link href="#features" textDecoration={"none"}>
+          <Button
+            width={{ base: "140px", md: "200px" }}
+            height={{ base: "40px", md: "50px" }}
+            fontSize={{ base: "18px", md: "20px" }}
+            bg="rgba(196, 196, 196, 0.22)"
+            pointerEvents="none"
+            children={more}
+            fontWeight="normal"
+          />
+        </Link>
+      </HStack>
+    </Stack>
+  );
+};
 
 const InfoButton = ({ text, background, color }: any) => (
   <Button

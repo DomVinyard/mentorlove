@@ -111,11 +111,7 @@ function TraineeCard({
           fontSize={{ base: "sm", md: "md" }}
         >
           {arrowIcon && (
-            <Image
-              src={`images/${arrowIcon}`}
-              height={{ base: "15px", md: "15px" }}
-              mr={{ base: "4px", md: "4px" }}
-            />
+            <Image src={`images/${arrowIcon}`} height={"15px"} mr={"4px"} />
           )}
           {caption}
         </Text>

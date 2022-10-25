@@ -6,15 +6,6 @@ import Integrations from "./sections/Integrations";
 import ProductTour from "./sections/ProductTour";
 import Pricing from "./sections/Pricing";
 
-const theme = extendTheme({
-  colors: {
-    red: { 100: "#FEF0EF", 300: "#EFDCDB", 500: "#CB4D4D", 700: "#CE365C" },
-    grey: { 200: "#1C1C1C", 300: "#F5F5F5", 700: "#4E5462", 900: "#202020" },
-    green: { 100: "#DFF0E8", 300: "#B9DECC", 500: "#A7CCB7", 700: "#1B7B45" },
-    blue: { 100: "#EFFAFE", 300: "#4E5462", 500: "#2A87A9" },
-  },
-});
-
 export const strings = {
   header: {
     title: "Help your trainees stay on track",
@@ -40,6 +31,15 @@ export const strings = {
     button: "Request access",
   },
 };
+
+const theme = extendTheme({
+  colors: {
+    red: { 100: "#FEF0EF", 300: "#EFDCDB", 500: "#CB4D4D", 700: "#CE365C" },
+    grey: { 200: "#1C1C1C", 300: "#F5F5F5", 700: "#4E5462", 900: "#202020" },
+    green: { 100: "#DFF0E8", 300: "#B9DECC", 500: "#A7CCB7", 700: "#1B7B45" },
+    blue: { 100: "#EFFAFE", 300: "#4E5462", 500: "#2A87A9" },
+  },
+});
 
 export const breakpointPx = 900;
 export const Inner = ({ children, fullOnMobile }: InnerProps) => (

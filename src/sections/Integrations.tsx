@@ -3,7 +3,7 @@ import { Inner, Title, strings } from "../App";
 import { GridItem, Image } from "@chakra-ui/react";
 
 const IntegrationGridItem = ({ filename, label }: IntegratioGridItemProps) => (
-  <GridItem marginX={"auto"}>
+  <GridItem marginX={"auto"} p={{ base: 4, md: 2 }}>
     <Image
       src={`logos/${filename}.png`}
       alt={label || filename}
